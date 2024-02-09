@@ -75,3 +75,4 @@ class CounterTest(TestCase):
         # Optionally, verify that the counter no longer exists by making a GET request
         get_result = self.client.get('/counters/test_counter')
         self.assertEqual(get_result.status_code, status.HTTP_404_NOT_FOUND)
+        
