@@ -15,7 +15,6 @@ from src.counter import app         # we need to import the unit under test - co
 from src import status              # we need to import the file that contains the status codes
 
 
-
 class CounterTest(TestCase):
     def setUp(self):
         """Prepare test case"""
