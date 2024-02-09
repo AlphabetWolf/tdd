@@ -14,6 +14,8 @@ from unittest import TestCase
 from src.counter import app         # we need to import the unit under test - counter
 from src import status              # we need to import the file that contains the status codes
 
+
+
 class CounterTest(TestCase):
     def setUp(self):
         """Prepare test case"""
@@ -24,7 +26,6 @@ class CounterTest(TestCase):
         """It should create a counter"""
         result = self.client.post('/counters/foo')
         self.assertEqual(result.status_code, status.HTTP_201_CREATED)
-
 
     def test_duplicate_a_counter(self):
         """It should return an error for duplicates"""
