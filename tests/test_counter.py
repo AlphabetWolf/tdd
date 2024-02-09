@@ -11,10 +11,8 @@ how to call the web service and assert what it should return.
 - The service must be able to read the counter
 """
 from unittest import TestCase
-from src.counter import app # we need to import the unit under test - counter
-from src import status # we need to import the file that contains the status codes
-
-
+from src.counter import app         # we need to import the unit under test - counter
+from src import status              # we need to import the file that contains the status codes
 
 class CounterTest(TestCase):
     def setUp(self):
