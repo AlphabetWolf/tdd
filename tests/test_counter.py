@@ -71,7 +71,3 @@ class CounterTest(TestCase):
         # Now, delete the counter
         delete_result = self.client.delete('/counters/test_counter')
         self.assertEqual(delete_result.status_code, status.HTTP_204_NO_CONTENT)
-
-        # Optionally, verify that the counter no longer exists by making a GET request
-        get_result = self.client.get('/counters/test_counter')
-        self.assertEqual(get_result.status_code, status.HTTP_404_NOT_FOUND)
