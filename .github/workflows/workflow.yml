@@ -40,14 +40,6 @@ jobs:
       - name: Run unit tests with nose
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
 
-      # Optional: Code coverage report
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v2
-        with:
-          file: ./coverage.xml
-          fail_ci_if_error: true
-          verbose: true
-
       # Optional: Add a step for type checking if you're using Python 3.6 or newer
       - name: Type check with mypy
         run: |
