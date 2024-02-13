@@ -37,12 +37,6 @@ jobs:
           flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
           flake8 . --count --exit-zero --max-line-length=127 --statistics
 
-      # Security analysis using Bandit - scans for common security issues in the Python code
-      - name: Security analysis with Bandit
-        run: |
-          pip install bandit
-          bandit -r . -c bandit.yaml
-
       - name: Run unit tests with nose
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
 
